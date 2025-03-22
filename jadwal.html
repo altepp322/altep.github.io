@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jadwal Sholat Bekasi - Maret 2025</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            text-align: center;
+        }
+        .navbar {
+            background: linear-gradient(45deg, #4CAF50, #2E7D32);
+            color: white;
+            padding: 15px;
+            font-size: 18px;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            display: inline-block;
+            transition: transform 0.3s, background 0.3s;
+        }
+        .navbar a:hover {
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 5px;
+            transform: translateY(-3px);
+        }
+        .container {
+            max-width: 1100px;
+            margin: 50px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        .header {
+            background: linear-gradient(45deg, #4CAF50, #2E7D32);
+            color: white;
+            padding: 20px;
+            border-radius: 10px 10px 0 0;
+            font-size: 24px;
+            font-weight: 600;
+        }
+        #clock {
+            font-size: 20px;
+            margin-top: 10px;
+            font-weight: bold;
+            color: #2E7D32;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background: #4CAF50;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background: #e8f5e9;
+        }
+    </style>
+    <script>
+        function updateClock() {
+            const now = new Date();
+            const hours = now.getHours().toString().padStart(2, '0');
+            const minutes = now.getMinutes().toString().padStart(2, '0');
+            const seconds = now.getSeconds().toString().padStart(2, '0');
+            document.getElementById('clock').innerText = `${hours}:${minutes}:${seconds}`;
+        }
+        setInterval(updateClock, 1000);
+    </script>
+</head>
+<body>
+    <div class="navbar">
+        <a href="ramadhan.html">Beranda</a>
+        <a href="jadwal.html">Jadwal Sholat</a>
+        <a href="doa.html">Doa Harian</a>
+        <a href="resep.html">makan-minuman Berbuka</a>
+        <a href="artikel.html">Artikel Islami</a>
+        <a href="kegiatan.html">Kegiatan Ramadhan</a>
+    </div>
+    <div class="container">
+        <div class="header">Jadwal Sholat Bekasi - Maret 2025</div>
+        <div id="clock">00:00:00</div>
+        <table>
+            <tr>
+                <th>Tanggal</th>
+                <th>Subuh</th>
+                <th>Terbit</th>
+                <th>Dzuhur</th>
+                <th>Ashar</th>
+                <th>Maghrib</th>
+                <th>Isya</th>
+            </tr>
+            <script>
+                const jadwalSholat = [
+                    ["01 Maret 2025", "04:42", "06:22", "12:08", "15:11", "18:14", "19:23"],
+                    ["02 Maret 2025", "04:42", "06:22", "12:08", "15:10", "18:14", "19:23"],
+                    ["03 Maret 2025", "04:42", "06:22", "12:07", "15:09", "18:13", "19:22"],
+                    ["04 Maret 2025", "04:42", "06:22", "12:07", "15:08", "18:13", "19:22"],
+                    ["05 Maret 2025", "04:42", "06:22", "12:07", "15:07", "18:13", "19:21"],
+                    ["06 Maret 2025", "04:42", "06:21", "12:07", "15:08", "18:12", "19:21"],
+                    ["31 Maret 2025", "04:41", "06:18", "12:00", "15:14", "18:00", "19:09"]
+                ];
+                
+                for (let i = 7; i <= 30; i++) {
+                    jadwalSholat.push([`${i} Maret 2025`, "04:41", "06:19", "12:05", "15:12", "18:05", "19:15"]);
+                }
+                
+                jadwalSholat.forEach(item => {
+                    document.write(`<tr><td>${item[0]}</td><td>${item[1]}</td><td>${item[2]}</td><td>${item[3]}</td><td>${item[4]}</td><td>${item[5]}</td><td>${item[6]}</td></tr>`);
+                });
+            </script>
+        </table>
+    </div>
+</body>
+</html>
